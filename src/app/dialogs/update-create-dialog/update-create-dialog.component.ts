@@ -46,7 +46,7 @@ export class UpdateCreateDialogComponent implements OnInit {
       status: this.baseForm.value.status,
       gender: this.baseForm.value.gender,
       created: this.baseForm.value.created,
-      image: this.char ?? 'assets/base.jpeg',
+      image: this.char ? this.char.image : 'assets/base.jpeg' ,
     }
     this.dialogRef.close(char)
   }

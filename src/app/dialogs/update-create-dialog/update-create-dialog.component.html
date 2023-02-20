@@ -26,7 +26,7 @@
     <mat-select formControlName="status">
       <mat-option [value]="'Alive'">Alive</mat-option>
       <mat-option [value]="'Dead'">Dead</mat-option>
-      <mat-option [value]="'Unknown'">Unknown</mat-option>
+      <mat-option [value]="'unknown'">Unknown</mat-option>
     </mat-select>
   </mat-form-field>
 
@@ -36,7 +36,7 @@
     <mat-select formControlName="gender">
       <mat-option [value]="'Male'">Male</mat-option>
       <mat-option [value]="'Female'">Female</mat-option>
-      <mat-option [value]="'Unknown'">Unknown</mat-option>
+      <mat-option [value]="'unknown'">Unknown</mat-option>
     </mat-select>
   </mat-form-field>
 
@@ -55,7 +55,7 @@
 
   <div>
     <button type="button" mat-button  mat-dialog-close="">Cancel</button>
-    <button type="submit" mat-button >Save</button>
+    <button type="submit" mat-button [disabled]="baseForm.invalid" >Save</button>
   </div>
 
 </form>
