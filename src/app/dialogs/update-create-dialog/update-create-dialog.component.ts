@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
+import {UntypedFormBuilder, Validators} from "@angular/forms";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {Character} from "../../../models/CharactersResponse";
 
@@ -20,7 +20,7 @@ export class UpdateCreateDialogComponent implements OnInit {
   });
 
 
-  constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<UpdateCreateDialogComponent>,
+  constructor(private fb: UntypedFormBuilder, public dialogRef: MatDialogRef<UpdateCreateDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public char: Character) { }
 
   ngOnInit(): void {
